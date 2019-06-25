@@ -65,6 +65,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'type'=>'usuario',
+            'image'=>'https://image.flaticon.com/icons/png/128/805/805385.png',
             'password' => bcrypt($data['password']),
         ]);
     }
