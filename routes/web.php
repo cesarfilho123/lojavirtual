@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
 Route::get('/dashboard/new/product','DashboardController@produto')->name('NovoProduto');
+Route::post('/dashboard/new/product/cadastrar','DashboardController@cadastrar')->name('cadastrarproduto');
