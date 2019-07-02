@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
     public function index()
     {
         $user =  Auth::user();
         return view('layouts.dash.dashboard',['user'=>$user]);
+    }
+    public function produto()
+    {
+      $user =  Auth::user();
+      return view('layouts.dash.newproduct',['user'=>$user]);
     }
 }
